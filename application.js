@@ -1,13 +1,11 @@
 var choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
-var userChoice = ""
-
 
 function randomChoice(){
  return choices[Math.floor(Math.random()*choices.length)]
 } 
 
 $("#element").html(choices.map(function(value) {
-  return('<li id="'+ value +'">' + value + '</li>');
+  return('<li id="'+ value +'"><img src="images/' + value + '.jpg" height="100" width="100"></li>');
 }).join(""));
 
 var battle = function (userChoice) {
